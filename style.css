@@ -1,12 +1,49 @@
+html {
+  background-color: rgb(0, 0, 0);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header{
+  padding: 10px 20px;
+  color: greenyellow;
+  text-align: center;
+}
+
+desc {
+  font-size: small;
+}
+
+body{
+  color: greenyellow;
+}
+
+p{
+  border-style: solid;
+  border-color: aquamarine;
+  padding: 4px;
+  text-align: center;
+}
+
+nav {
+  color: white;
+  background-color: rgb(0, 40, 20);
+  padding: 4px 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 footer {
     text-align: center;
     padding: 5px;
-    background-color: black;
+    background-color: rgb(0, 40, 20);
     color: greenyellow;
   }
 
-h1 {
-  text-align: center;
-  color: blue;
-  background-color: greenyellow;
-}
