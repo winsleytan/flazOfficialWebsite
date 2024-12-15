@@ -21,7 +21,10 @@ p{
   border-style: solid;
   border-color: aquamarine;
   padding: 4px;
+<<<<<<< HEAD
   text-align: center;
+=======
+>>>>>>> 106122ff7dab9ec7b530b9b9a6e6bbc50e66ef37
 }
 
 nav {
@@ -33,11 +36,17 @@ nav {
   justify-content: space-between;
 }
 
+<<<<<<< HEAD
 center {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+=======
+options {
+  border-style: solid;
+  border-spacing: 5px 1rem;
+>>>>>>> 106122ff7dab9ec7b530b9b9a6e6bbc50e66ef37
 }
 
 footer {
@@ -46,4 +55,7 @@ footer {
     background-color: rgb(0, 40, 20);
     color: greenyellow;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 106122ff7dab9ec7b530b9b9a6e6bbc50e66ef37
