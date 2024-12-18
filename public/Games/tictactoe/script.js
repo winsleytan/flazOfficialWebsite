@@ -35,20 +35,26 @@ const enableButtons = () => {
   popupRef.classList.add("hide");
 };
 
+//Back To Games Button
+document.getElementById('back').addEventListener('click', function() {
+  window.location.href = '/public/Games/games.html'; 
+});
+
+
 //This function is executed when a player wins
 const winFunction = (letter) => {
   disableButtons();
   if (letter == "X") {
-    msgRef.innerHTML = "&#x1F389; <br> 'X' Wins";
+    msgRef.innerHTML = "&#x1F389; <br> 'X' 赢了 :>";
   } else {
-    msgRef.innerHTML = "&#x1F389; <br> 'O' Wins";
+    msgRef.innerHTML = "&#x1F389; <br> 'O' 赢了 :>";
   }
 };
 
 //Function for draw
 const drawFunction = () => {
   disableButtons();
-  msgRef.innerHTML = "&#x1F60E; <br> It's a Draw";
+  msgRef.innerHTML = "&#x1F60E; <br> 打平";
 };
 
 //New Game
