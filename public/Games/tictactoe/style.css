@@ -6,7 +6,8 @@
 }
 body {
   height: 100vh;
-  background: #00091f;
+  background-image: url('./hsrbg.png');
+  background-position: 0cap;
 }
 html {
   font-size: 16px;
@@ -37,20 +38,36 @@ button:hover {
   font-size: 12vmin;
   color: #00091f;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  
 }
-#restart {
+#restart{
   font-size: 1.3em;
-  padding: 1em;
+  padding: 0.5em;
   border-radius: 8px;
   background-color: #ffffff;
   color: #00091f;
   border: none;
-  position: relative;
+  position:absolute;
   margin: 1.5em auto 0 auto;
-  display: block;
+  display: flow-root;
+  transform: translate(0%, -50%);
 }
+
+#back{
+  font-size: 1.3em;
+  padding: 0.5em;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #00091f;
+  border: none;
+  margin: 1.5em auto 0 auto;
+  display: flow-root;
+  transform: translate(20%, -50%);
+}
+
 .popup {
-  background: #00091f;
+  background-image: url('./hsrbg.png');
+  background-position: 0cap;
   height: 100%;
   width: 100%;
   position: absolute;
