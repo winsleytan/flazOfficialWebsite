@@ -7,10 +7,27 @@
     <link rel="stylesheet" href="./style.css"/>
 </head>
 <body>
-    <desc>    <h2>Projects that made by Flaz</h2></desc>
+    <desc>    <h2>Projects</h2><h5>DISCLAIMER: Some of the projects are referred from the web.</h5></desc>
     <br/>
-<ol>
-    <li>Register Page</li>
+
+    <nav class="active" id="nav">
+      <ul>
+        <li><a href="./project.html">Projects</a></li>
+        <li><a href="../Games/games.html">Games</a></li>
+        <li><a href="../gallery/gallery.html">Gallery</a></li>
+        <li><a href="../about/about.html">About</a></li>
+        <li><a href="../contact/contact.html">Contact</a></li>
+      </ul>
+      <button class="icon" id="toggle">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+      </button>
+    </nav>
+<br/>
+
+
+<div class="row">
+  <div class="column">
     <a href="./register.html">
         <div class="container">
            <img src="./img/register.png" alt="register" class="image">
@@ -19,25 +36,43 @@
            </div>
          </div>
    </a>
-   <li>Ordering Page</li>
-   <a href="./ordering-homepage.html">
-    <div class="container">
-       <img src="./img/online-ordering.png" alt="online ordering" class="image">
-       <div class="overlay">
-         <div class="text">Register Page</div>
-       </div>
-     </div>
-</a>
-</ol>
+  </div>
+
+  <div class="column">
+    <a href="./login/index.html">
+        <div class="container">
+           <img src="./img/login.png" alt="login" class="image">
+           <div class="overlay">
+             <div class="text">Login Page</div>
+           </div>
+         </div>
+   </a>
+  </div>
+
+  <div class="column">
+    <a href="">
+        <div class="container">
+           <img src="./img/online-ordering.png" alt="online-ordering" class="image">
+           <div class="overlay">
+             <div class="text">Online Ordering</div>
+           </div>
+         </div>
+   </a>
+  </div>
+
+  
+</div>
+
+
 </body>
 
 <footer>
     <small>
     <center>
-        ver. Alpha 1.2 <br/>
+        ver. Alpha 1.3 <br/>
         Copyright Flaz 2024
     </center>
     </small>
 </footer>
-
+<script src="script.js"></script>
 </html>
