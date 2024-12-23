@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Ordering | Projects</title>
+    <link rel="icon" href="./img/flazLogo.svg" type="image/x-icon" sizes="16x16">
+    <link rel="icon" href="" type="image/x-icon" sizes="16x16">
+    <style>
+        /* Your CSS styles here */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000A22;
+            color: white;
+            
+        }
+        .container {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            width: 800px;
+            background-color: #000A22;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: white;
+        }
+        .header {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #000A22;
+
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+        }
+        .login {
+            width: 30%;
+            padding: 10px;
+            border-right: 1px solid #ccc;
+        }
+        .login h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .login label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .login input[type="text"], .login input[type="password"] {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login input[type="submit"], .login input[type="reset"] {
+            padding: 10px 20px;
+            margin-right: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        .login input[type="reset"] {
+            background-color: #6c757d;
+        }
+        .login a {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #007bff;
+        }
+        .welcome {
+            width: 65%;
+            padding: 10px;
+        }
+        .welcome h2 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .categories {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .category {
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        .images {
+            display: flex;
+            justify-content: space-between;
+        }
+        .image-box {
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            width: 100px;
+            background-color: #000A22;
+        }
+        .image-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        /* .image-box p {
+            margin-top: 10px;
+            border -top: 1px solid #ccc;
+            padding-top: 5px;
+        } */
+        .image-box input[type="number"] {
+            width: 50px;
+            padding: 5px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .image-box button {
+            padding: 5px 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            奶龙玩具店
+        </div>
+        <div class="content">
+            <div class="login">
+                <h2>登入</h2>
+                <p>给予已注册的顾客</p>
+                <form method="post" action="">
+                    <label for="phone">电话号码</label>
+                    <input id="phone" name="phone" placeholder="012-69696969" type="text" required/>
+                    <label for="password">密码</label>
+                    <input id="password" name="password" placeholder="********" type="password" required/>
+                    <input type="submit" value="登入"/>
+                    <input type="reset" value="RESET"/>
+                    <a href="./register.html">新顾客？</a>
+                </form>
+            </div>
+            <div class="welcome">
+        <h2>欢迎来到奶龙玩具店</h2>
+        <div class="categories">
+  <div class="category" data-category="Category 1">我是奶龙</div>
+  <div class="category" data-category="Category 2">我才是奶龙</div>
+  <div class="category" data-category="Category 3">今夜星光闪闪</div>
+  <div class="category" data-category="Category 4">我爱你的心满满</div>
+</div>
+
+<div class="images">
+  <div class="image-box" data-category="Category 1">
+    <img alt="nailong" src="./img/nailong.png" height="80" width="80"/>
+    <p>奶龙A</p>
+    <label for="quantity1">Quantity:</label>
+    <input id="quantity1" type="number" min="1" value="1"/>
+    <button onclick="showSignInMessage()">Add to Cart</button>
+  </div>
+
+  <div class="image-box" data-category="Category 2">
+    <img alt="nailong" src="./img/nailong.png" height="80" width="80"/>
+    <p>奶龙B</p>
+    <label for="quantity2">Quantity:</label>
+    <input id="quantity2" type="number" min="1" value="1"/>
+    <button onclick ="showSignInMessage()">Add to Cart</button>
+  </div>
+
+  <div class="image-box" data-category="Category 3">
+    <img alt="nailong" src="./img/nailong.png" height="80" width="80"/>
+    <p>奶龙C</p>
+    <label for="quantity3">Quantity:</label>
+    <input id="quantity3" type="number" min="1" value="1"/>
+    <button onclick="showSignInMessage()">Add to Cart</button>
+  </div>
+
+  <div class="image-box" data-category="Category 4">
+    <img alt="nailong" src="./img/nailong.png" height="80" width="80"/>
+    <p>奶龙D</p>
+    <label for="quantity4">Quantity:</label>
+    <input id="quantity4" type="number" min="1" value="1"/>
+    <button onclick="showSignInMessage()">Add to Cart</button>
+  </div>
+</div>
+
+<script>
+  const categories = document.querySelectorAll('.category');
+  const images = document.querySelectorAll('.image-box');
+
+  categories.forEach(category => {
+    category.addEventListener('click', () => {
+      const selectedCategory = category.getAttribute('data-category');
+      images.forEach(image => {
+        if (image.getAttribute('data-category') === selectedCategory) {
+          image.style.display = 'block';
+        } else {
+          image.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
+<script>
+        function showSignInMessage() {
+            alert("哥别急，先登入嘛");
+        }
+</script>
+</body>
+</html>

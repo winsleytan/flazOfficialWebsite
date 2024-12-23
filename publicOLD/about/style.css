@@ -1,0 +1,33 @@
+html {
+    background-color: rgb(0, 0, 0);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: greenyellow;
+  }
+
+desc{
+    text-align: center;
+}
+
+p{
+    border-style: solid;
+    border-color: aquamarine;
+    padding: 4px;
+  }
+
+  .container {
+    position: relative;
+    width: 50%;
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  footer {
+    text-align: center;
+    padding: 5px;
+    background-color: rgb(0, 40, 20);
+    color: greenyellow;
+  }

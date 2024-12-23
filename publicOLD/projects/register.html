@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Register | Projects</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background-image: url('./img/bg.png'); background-repeat: no-repeat;   }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 500px;
+            width: 100%;
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .logo img {
+            width: 100px;
+            height: 100px;
+        }
+        .logo h1 {
+            margin: 10px 0 0;
+            font-size: 24px;
+        }
+        .header {  padding: 10px; text-align: center; margin-bottom: 20px; }
+        .header h1 { margin: 0; font-size: 36px; }
+        .content h2 { font-size: 24px; margin-bottom: 10px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { font-weight: bold; display: block; margin-bottom: 5px; }
+        .form-group input { width: 100%; padding: 10px; font-size: 14px; }
+        .buttons { display: flex; justify-content: space-between;  border-radius: 5px; }
+        .buttons button { padding: 10px 20px; font-size: 14px;  cursor: pointer;  border-radius: 5px; }
+        .footer { font-size: 12px; margin-top: 20px; }
+        .cont {	
+    text-align: center;
+    margin-bottom: 15px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>奶龙集团</h1>
+            <div class="logo">
+            <img src="./img/nailong.png" alt="Nailong">  
+        </div>
+        <div class="content">
+            <h2>NEW USER REGISTRATION</h2>
+            <p>*Please ensure your information is correct before submission</p>
+            <form method="POST" action="">
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" name="phone" value="" placeholder="012-5886969" pattern="[0-9]+" 
+                    required >
+                </div>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" value="" placeholder="Lim Guan Guan" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Password:</label>
+                    <input type="password" id="password" name="password" value="" placeholder="Password must at least 8 characters and include @#*! etc" required>
+                </div>
+                <div class="buttons">
+                    <button type="submit">REGISTER</button>
+                    <button type="reset">RESET</button>
+                    <button type="button" onclick="window.location.href='/index.html';">BACK TO HOME</button>
+                </div>
+                
+            </form>
+        </div>
+        <div class="footer">
+            *In real scenario, the data entered in this site will store in database through MySQL, but I am too lazy to do it haha
+        </div>
+    </div>
+</body>
+
+
+</html>

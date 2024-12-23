@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Flaz Official Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="../flazLogo.svg" type="image/x-icon" sizes="16x16">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,0"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
+  </head>
+  <!-- sidebar -->
+  <body>
+    <aside class="sidebar">
+      <header>
+        <button
+          type="button"
+          className="sidebar-burger"
+          onClick="toggleSidebar()"
+        >
+          <i class="ai-three-line-horizontal"></i>
+        </button>
+        <img src="../flazLogo.svg" />
+      </header>
+      <ul>
+        <li>
+          <button id="home"  type="button" onclick="onClick(this)">
+            <i class="ai-home-alt1"></i>
+            <p>Home</p>
+          </button>
+        </li>
+        <li>
+          <button id="gallary" type="button" onclick="onClick(this)">
+            <i class="ai-dashboard"></i>
+            <p>Gallary</p>
+          </button>
+        </li>
+        <li>
+          <button type="button" onclick="onClick(this)">
+            <i class="bx bxs-file"></i>
+            <p>Projects</p>
+            <i class="ai-chevron-down-small"></i>
+          </button>
+          <div class="sub-menu">
+            <ul>
+              <li>
+                <button id="register-page" type="button">Register Page</button>
+              </li>
+              <li>
+                <button id="login-page" type="button">Login Page</button>
+              </li>
+              <li>
+                <button id="online-ordering-page" type="button">Online Ordering Page</button>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button type="button" onclick="onClick(this)">
+            <i class="bx bx-game"></i>
+            <p>Games</p>
+            <i class="ai-chevron-down-small"></i>
+          </button>
+          <div class="sub-menu">
+            <ul>
+              <li>
+                <button id="tictactoe" type="button">Tic Tac Toe</button>
+              </li>
+              <li>
+                <button id="rockPaperScissors" type="button">Rock Paper Scissors</button>
+              </li>
+              <li>
+                <button id="tower" type="button">Tower Blocks</button>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button id="about" type="button" onclick="onClick(this)">
+            <i class="bx bx-info-circle"></i>
+            <p>About</p>
+          </button>
+        </li>
+        <li>
+          <button id="contact" type="button" onclick="onClick(this)">
+            <i class="bx bxs-contact"></i>
+            <p>Contact</p>
+          </button>
+        </li>
+        <li>
+          <button type="button" onclick="onClick(this)">
+            <i class="bx bxl-github"></i>
+            <p>Ver Beta 1.0</p>
+          </button>
+        </li>
+      </ul>
+    </aside>
+
+<!-- main content -->
+    <dev class="maincontent">
+      <div class="container">       
+        <article class="card">
+            <div class='background'>
+                <img src="../flazLogo.svg "profile"/>
+            </div>
+            <div class='content'>
+                <h2>Contact Flaz
+                </h2>
+                <p>
+                    Come chat with me!! Don't worry I won't eat you!!
+                </p>
+                <p>I Currently Learning:</p>
+                <ul class="chips">
+                    <li class="chip">HTML</li>
+                    <li class="chip">Node.js</li>
+                    <li class="chip">CSS</li>
+                    <li class="chip">MySQL</li>
+                </ul>
+                <div class="action-buttons">
+                    <a href="https://github.com/winsleytan">
+                        Visit My GitHub
+                    </a>
+                    <a href="https://discord.gg/A725pd8b5j" class="secondary">
+                        Join My Discord Server
+                    </a>
+                </div>
+            </div>
+        </article>
+    </div>
+    </dev>
+
+
+
+    <script src="main.js"></script>
+  </body>
+</html>

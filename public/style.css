@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+    
+  }
+  
+  body {
+    margin: 0;
+    background-color: #000A22;
+    font-family: "Euclid Circular A";
+  }
+
+  button {
+    background: transparent;
+    border-color: white;
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+    color: white;
+    border-radius: 1ch;
+    
+  }
