@@ -101,16 +101,60 @@
           </button>
         </li>
         <li>
-          <button type="button" onclick="onClick(this)">
+          <div class="frame">
+            <hr/>
+          <button type="button"  onclick="handleClick('six')">
             <i class="bx bxl-github"></i>
-            <p>Ver Beta 1.0</p>
+            <p>Ver Beta 1.0.1</p>
           </button>
+        </div>
         </li>
       </ul>
     </aside>
+    
+    <div id="modal-container">
+      <div class="modal-background">
+        <div class="modal">
+          <h2>ⓘ Beta 1.0.1</h2>
+          <p style="text-align: left;">- Minor UI Changes <br/>- Bugs fix</p>
+          <svg
+            class="modal-svg"
+            xmlns="http://www.w3.org/2000/svg"
+            width="2000%"
+            height="500%"
+            preserveAspectRatio="none"
+          >
+            <rect
+              x="0"
+              y="0"
+              fill="none"
+              width="226"
+              height="162"
+              rx="3"
+              ry="3"
+            ></rect>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      const modal = document.querySelector("#modal-container");
+
+      const handleClick = (buttonId) => {
+        modal.classList = [];
+        modal.classList.add(buttonId);
+        document.body.classList.add("modal-active");
+      };
+
+      modal.addEventListener("click", () => {
+        modal.classList.add("out");
+        document.body.classList.remove("modal-active");
+      });
+    </script>
 
     <dev class="maincontent">
-      <h2>About Flaz</h2>
+      <h2 style="font-size: xx-large;">About Flaz</h2>
           <p> Hi! My name is Flaz. I’m a budding programmer excited to dive into the world of coding and problem-solving.
             Currently, I’m focused on building my skills in programming 
             languages and exploring how technology can create innovative solutions. </p>

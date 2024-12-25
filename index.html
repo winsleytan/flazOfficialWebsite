@@ -101,20 +101,66 @@
           </button>
         </li>
         <li>
-          <button type="button" onclick="onClick(this)">
+          <div class="frame">
+            <hr/>
+          <button type="button"  onclick="handleClick('six')">
             <i class="bx bxl-github"></i>
-            <p>Ver Beta 1.0</p>
+            <p>Ver Beta 1.0.1</p>
           </button>
+        </div>
         </li>
       </ul>
     </aside>
+    
+    <div id="modal-container">
+      <div class="modal-background">
+        <div class="modal">
+          <h2>ⓘ Beta 1.0.1</h2>
+          <p style="text-align: left;">- Minor UI Changes <br/>- Bugs fix</p>
+          <svg
+            class="modal-svg"
+            xmlns="http://www.w3.org/2000/svg"
+            width="2000%"
+            height="500%"
+            preserveAspectRatio="none"
+          >
+            <rect
+              x="0"
+              y="0"
+              fill="none"
+              width="226"
+              height="162"
+              rx="3"
+              ry="3"
+            ></rect>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      const modal = document.querySelector("#modal-container");
+
+      const handleClick = (buttonId) => {
+        modal.classList = [];
+        modal.classList.add(buttonId);
+        document.body.classList.add("modal-active");
+      };
+
+      modal.addEventListener("click", () => {
+        modal.classList.add("out");
+        document.body.classList.remove("modal-active");
+      });
+    </script>
+
+
     <dev class="maincontent">
       <h1>Welcome!!</h1>
-          <p>I am glad that you vistied my first ever website. 
-          I am inspired by some of my seniors and even my beloved teacher Mr. Gopi 
-          to make this website possible LOL. Since it's almost 2025, my goal is going to make a own 
-          website for myself and maybe showing off to my friends?
-          Haha idk, anyway Merry Chritsmas!!</p>
+          <p>I am glad that you vistied my first ever website. I am a student from Malaysia and I am inspired by some of my seniors 
+            and even my beloved teacher Mr. Gopi to create this website. I am still learning and improving the website in future. 
+            This website is a small step towards my journey in web development, and I am excited to share it with you. 
+            Feel free to explore the different sections and let me know your thoughts via DC.
+          </p>
 
           <h3>My Favourite Anime Characters :></h3>
 
