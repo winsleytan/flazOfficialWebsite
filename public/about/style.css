@@ -157,6 +157,7 @@ button {
   min-height: 35rem;
   position:relative;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-left: 2.5rem;
 }
 
 /* Version Box */
