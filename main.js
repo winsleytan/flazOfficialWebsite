@@ -24,7 +24,7 @@ const onClick = (item) => {
 
 //Button Hyperlink
 document.getElementById('home').addEventListener('click', function() {
-  window.location.href = './index.html'; 
+  window.location.href = './'; 
 });
 
 document.getElementById('gallary').addEventListener('click', function() {
