@@ -212,3 +212,14 @@ class Slider {
 }
 
 const ImageSlider = new Slider(document.querySelector(".image-slider"));
+
+
+const app = express()
+app.use(cors(
+    {
+        origin: ["https://flaz-official-website.vercel.app/"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
+app.use(express.json())
