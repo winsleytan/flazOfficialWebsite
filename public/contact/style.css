@@ -5,8 +5,11 @@
 body {
   margin: 0;
   background-color: #000A22;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex; 
+  flex-direction: row;
 }
+
 
 button {
   background: transparent;
@@ -15,22 +18,25 @@ button {
   cursor: pointer;
   text-align: left;
 }
-/* sidebar */
+
 .sidebar {
-  position: fixed;
+  position: relative; 
+  flex: 0 0 260px;
+  margin-left: 100px;
+  margin-right: 50px;
+  margin-bottom: 50px;
   top: 24px;
-  left: 64px;
+  left: 0;
   bottom: 24px;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  width: 260px;
   border-radius: 16px;
-  padding: 0 16px;
+  padding: 0 12px;
   border: 1px solid rgb(255 255 255 / 8%);
   background: rgba(255, 255, 255, 0.068);
   backdrop-filter: blur(20px);
-  transition: width 0.4s;
+  
 }
 
 .sidebar header {
@@ -134,166 +140,34 @@ button {
   min-width: 20px;
 }
 
-/* content */
-:root {
-  --white: #FFFFFF;
-  --gray: #EAEAEC;
-  --text: #29283F;
-  --primary: #6f3ef6;
-  --primary-darker: #502ab7;
+.maincontent {
+  flex: 1; 
+  margin: 24px 16px; 
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  border-radius: 16px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.068);
+  color: rgb(255 255 255 / 95%);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  overflow-y: auto;
+  margin-right: 100px;
 }
 
-
-.maincontent {
-  margin-left: 350px;
-  margin-right: 100px;
-  margin-top: 24px;
-  display:flex;
-  background: 
-        var(--background);
-    display: grid;
-    place-items: center;
-    height: 100vh;
-    font-size: 16px;
-    padding: 1.5rem;
-    font-family: Poppins, 
-        sans-serif;
-    box-sizing: border-box;
+.title {
+  margin: 0;
+  text-align: center;
+  font-size: 30px;
 }
 
 .container {
   position:relative;
 }
 
-.card {
-  display: flex;
-  flex-wrap: wrap;
-  border-radius: 1.5rem;
-  background: white;
-  cursor: pointer;
-  overflow: hidden;
-  max-width: clamp(
-      50rem, 100vw, 20rem
-  );
-  min-width: 20rem;
-  min-height: 10.5rem;
-  transition: box-shadow 0.3s;
-}
-
-.card:hover {
-  box-shadow: 
-      rgba(0, 0, 0, 0.35) 
-      0px 5px 15px;
-}
-
-.background {
-  flex: 1 1 10rem;
-}
-
-.background img {
-  width: 100%;
-  height: 100%;
-  object-fit:fill;
-}
-
-.content {
-  flex: 3 1 22rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  padding: 1rem;
-}
-
-.content > h2 {
-  font-size: clamp(
-      1rem, 2.5vw, 
-      1.3rem);
-  font-weight: 700;
-  margin-bottom: clamp(
-      0.4rem, 4vw, 
-      0.3rem
-  );
-}
-
-.content > p {
-  font-size: clamp(1rem, 
-      1vw, 1rem);
-  font-weight: 300;
-  margin: 0.1rem 0;
-}
-
-.content a {
-  color: var(
-      --primary-violet
-  );
-}
-
-.chips {
-  display: flex;
-  gap: 0.8rem;
-  flex-wrap: wrap;
-  list-style-type: none;
-  padding: 0.7rem 0px 1rem 0px;
-}
-
-.chip {
-  border-radius: 0.5rem;
-  padding: 0.2rem 0.2rem;
-  font-size: 0.9375rem;
-  transition: all 0.3s;
-  font-weight: 500;
-  border: 1px solid var(
-      --text);
-  color: var(--text);
-}
-
-.chip:hover {
-  background: var(
-      --text);
-  color: var(--white)
-}
-
-.action-buttons {
-  border-top: 1px solid var(
-      --gray);
-  padding-top: 1rem;
-  gap: 0.77rem;
-  display: flex;
-  margin-top: auto;
-  flex-wrap: wrap;
-}
-
-.action-buttons a {
-  background: var(
-      --primary);
-  color: white;
-  padding: 0.75rem;
-  text-decoration: none;
-  border-radius: 0.75rem;
-  outline: none;
-  border: none;
-  font-size: 1.125rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  white-space: nowrap;
-  flex: 1 0 11rem;
-  max-width: 99%;
-  transition: background 0.3s;
-}
-
-.action-buttons a:hover {
-  background: var(--primary-darker);
-  text-decoration: underline;
-}
-
-.action-buttons a.secondary {
-  background: inherit;
-  color: var(--text);
-  border: 1px solid var(
-      --text);
-  flex: 1 0 4rem;
-}
 
 /* Version Box */
 .grid.grid.two-col > div {
@@ -390,7 +264,7 @@ body.modal-active {
 #modal-container .modal-background .modal h2 {
   font-size: 25px;
   line-height: 25px;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
   color: #f9f9f9;
 }
 #modal-container .modal-background .modal p {

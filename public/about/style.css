@@ -5,7 +5,9 @@
 body {
   margin: 0;
   background-color: #000A22;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex; 
+  flex-direction: row;
 }
 
 button {
@@ -15,23 +17,24 @@ button {
   cursor: pointer;
   text-align: left;
 }
-
 .sidebar {
-  position: fixed;
+  position: relative; 
+  flex: 0 0 260px;
+  margin-left: 100px;
+  margin-right: 50px;
+  margin-bottom: 50px;
   top: 24px;
-  left: 64px;
+  left: 0;
   bottom: 24px;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  width: 260px;
   border-radius: 16px;
-  padding: 0 16px;
+  padding: 0px 12px 20px 12px;
   border: 1px solid rgb(255 255 255 / 8%);
   background: rgba(255, 255, 255, 0.068);
   backdrop-filter: blur(20px);
-  transition: width 0.4s;
- 
+  
 }
 
 .sidebar header {
@@ -136,11 +139,8 @@ button {
 }
 
 .maincontent {
-  margin-left: 350px;
-  margin-right: 100px;
-  margin-top: 24px;
-  margin-bottom: 24px;
-  position: relative;
+  flex: 1; 
+  margin: 24px 16px; 
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -149,15 +149,34 @@ button {
   padding: 16px;
   background: rgba(255, 255, 255, 0.068);
   color: rgb(255 255 255 / 95%);
-  font-family: inherit;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
-  min-width: 30rem;
-  min-height: 35rem;
-  position:relative;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding-left: 2.5rem;
+  overflow-y: auto;
+  margin-right: 100px;
+}
+
+
+.about_title {
+  font-weight: 800;
+  font-size: 20px;
+  padding: 0 22px;
+}
+
+.github_stats {
+  margin: 0;
+}
+
+.current_repo {
+  margin:0;
+}
+
+.introduction {
+  background-color: #00184f;
+  text-align: left;
+  padding: 40px;
+  border-radius: 20px;
+  font-weight: 500;
 }
 
 /* Version Box */
@@ -255,7 +274,7 @@ body.modal-active {
 #modal-container .modal-background .modal h2 {
   font-size: 25px;
   line-height: 25px;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
   color: #f9f9f9;
 }
 #modal-container .modal-background .modal p {
@@ -652,3 +671,4 @@ body.modal-active {
     transform: scale(0);
   }
 }
+

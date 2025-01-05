@@ -24,119 +24,136 @@
     <script src="https://unpkg.com/akar-icons-fonts"></script>
   </head>
   <body>
-    <aside class="sidebar">
-      <header>
-        <button
-          type="button"
-          className="sidebar-burger"
-          onClick="toggleSidebar()"
-        >
-          <i class="ai-three-line-horizontal"></i>
-        </button>
-        <img src="../flazLogo.svg" />
-      </header>
-      <ul>
-        <li>
-          <button id="home"  type="button" onclick="onClick(this)">
-            <i class="ai-home-alt1"></i>
-            <p>Home</p>
-          </button>
-        </li>
-        <li>
-          <button id="gallary" type="button" onclick="onClick(this)">
-            <i class="ai-dashboard"></i>
-            <p>Gallary</p>
-          </button>
-        </li>
-        <li>
-          <button type="button" onclick="onClick(this)">
-            <i class="bx bxs-file"></i>
-            <p>Projects</p>
-            <i class="ai-chevron-down-small"></i>
-          </button>
-          <div class="sub-menu">
-            <ul>
-              <li>
-                <button id="register-page" type="button">Register Page</button>
-              </li>
-              <li>
-                <button id="login-page" type="button">Login Page</button>
-              </li>
-              <li>
-                <button id="online-ordering-page" type="button">Online Ordering Page</button>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <button type="button" onclick="onClick(this)">
-            <i class="bx bx-game"></i>
-            <p>Games</p>
-            <i class="ai-chevron-down-small"></i>
-          </button>
-          <div class="sub-menu">
-            <ul>
-              <li>
-                <button id="tictactoe" type="button">Tic Tac Toe</button>
-              </li>
-              <li>
-                <button id="rockPaperScissors" type="button">Rock Paper Scissors</button>
-              </li>
-              <li>
-                <button id="tower" type="button">Tower Blocks</button>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <button id="about" type="button" onclick="onClick(this)">
-            <i class="bx bx-info-circle"></i>
-            <p>About</p>
-          </button>
-        </li>
-        <li>
-          <button id="contact" type="button" onclick="onClick(this)">
-            <i class="bx bxs-contact"></i>
-            <p>Contact</p>
-          </button>
-        </li>
-        <li>
-          <div class="frame">
-            <hr/>
-          <button type="button"  onclick="handleClick('six')">
-            <i class="bx bxl-github"></i>
-            <p>Ver Beta 1.0.2</p>
-          </button>
-        </div>
-        </li>
-      </ul>
-    </aside>
-    
-    <div id="modal-container">
-      <div class="modal-background">
-        <div class="modal">
-          <h2>ⓘ Beta 1.0.2</h2>
-          <p style="text-align: left;">- Updated Home Page <br/>- Minor UI Changes</p>
-          <svg
-            class="modal-svg"
-            xmlns="http://www.w3.org/2000/svg"
-            width="2000%"
-            height="500%"
-            preserveAspectRatio="none"
-          >
-            <rect
-              x="0"
-              y="0"
-              fill="none"
-              width="226"
-              height="162"
-              rx="3"
-              ry="3"
-            ></rect>
-          </svg>
-        </div>
+<!-- Sidebar for navigation -->
+<aside class="sidebar">
+  <header>
+    <!-- Button to toggle sidebar visibility -->
+    <button
+      type="button"
+      className="sidebar-burger"
+      onClick="toggleSidebar()"
+    >
+      <i class="ai-three-line-horizontal"></i>
+    </button>
+    <!-- Website logo -->
+    <img src="../flazLogo.svg" />
+  </header>
+  <!-- Navigation menu -->
+  <ul>
+    <li>
+      <button id="home" type="button" onclick="onClick(this)">
+        <i class="ai-home-alt1"></i>
+        <p>Home</p>
+      </button>
+    </li>
+    <li>
+      <button id="gallary" type="button" onclick="onClick(this)">
+        <i class="ai-dashboard"></i>
+        <p>Gallary</p>
+      </button>
+    </li>
+    <li>
+      <button type="button" onclick="onClick(this)">
+        <i class="bx bxs-file"></i>
+        <p>Projects</p>
+        <i class="ai-chevron-down-small"></i>
+      </button>
+      <!-- Sub-menu for Projects -->
+      <div class="sub-menu">
+        <ul>
+          <li>
+            <button id="register-page" type="button">Register Page</button>
+          </li>
+          <li>
+            <button id="login-page" type="button">Login Page</button>
+          </li>
+          <li>
+            <button id="online-ordering-page" type="button">Online Ordering Page</button>
+          </li>
+        </ul>
       </div>
+    </li>
+    <li>
+      <button type="button" onclick="onClick(this)">
+        <i class="bx bx-game"></i>
+        <p>Games</p>
+        <i class="ai-chevron-down-small"></i>
+      </button>
+      <!-- Sub-menu for Games -->
+      <div class="sub-menu">
+        <ul>
+          <li>
+            <button id="tictactoe" type="button">Tic Tac Toe</button>
+          </li>
+          <li>
+            <button id="rockPaperScissors" type="button">Rock Paper Scissors</button>
+          </li>
+          <li>
+            <button id="tower" type="button">Tower Blocks</button>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <button id="about" type="button" onclick="onClick(this)">
+        <i class='bx bxs-user-detail'></i>
+        <p>About</p>
+      </button>
+    </li>
+    <li>
+      <button id="feedback" type="button" onclick="onClick(this)">
+        <i class="bx bxs-error"></i>
+        <p>Feedback</p>
+      </button>
+    </li>
+    <li>
+      <button id="github" type="button" onclick="onClick(this)">
+        <i class="bx bxl-github"></i>
+        <p>GitHub</p>
+      </button>
+    </li>
+    <li>
+      <div class="frame">
+        <hr/>
+        <button type="button" onclick="handleClick('six')">
+          <i class="bx bxl-github"></i>
+          <p>Ver Release 1.0</p>
+        </button>
+      </div>
+    </li>
+  </ul>
+</aside>
+
+<!-- Modal container for displaying updates -->
+<div id="modal-container">
+  <div class="modal-background">
+    <div class="modal">
+      <h2>ⓘ Release 1.0</h2>
+      <p style="text-align: left; padding: 0px 5px">
+        - Pages Changes</br>
+        - UI Improvements</br>
+        - Bug Fixes</br>
+      </p>
+      <svg
+        class="modal-svg"
+        xmlns="http://www.w3.org/2000/svg"
+        width="2000%"
+        height="500%"
+        preserveAspectRatio="none"
+      >
+        <rect
+          x="0"
+          y="0"
+          fill="none"
+          width="226"
+          height="162"
+          rx="3"
+          ry="3"
+        ></rect>
+      </svg>
     </div>
+  </div>
+</div>
 
     <script type="text/javascript">
       const modal = document.querySelector("#modal-container");
@@ -154,7 +171,10 @@
     </script>
 
     <dev class="maincontent">
-      <h2 style="font-size: xx-large;">About Flaz</h2>
+      <div class="about_title">
+      <h1>About Flaz</h1>
+    </div>
+      <div class="introduction">
           <p> Hi! My name is Flaz. I’m a budding programmer excited to dive into the world of coding and problem-solving.
             Currently, I’m focused on building my skills in programming 
             languages and exploring how technology can create innovative solutions. </p>
@@ -167,10 +187,13 @@
             In conclusion, I’m JUST A CHILL GUY who enjoys going with the flow, staying grounded, 
     and keeping life as stress-free as possible.
           </p>
-          <p>
-            DISCLAIMER: Projects/Games are referred from the Internet and not fully made by my own.
-          </p>
-    
+        </div>
+        <h3 class="github_stats">📈 My GitHub Stats</h3>
+        <iframe src="https://github-readme-stats.vercel.app/api?username=winsleytan&theme=swift&show_icons=true" width="400" height="200" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+
+        <h3 class="current_repo">☕︎ Current Repo</h3>
+        <iframe src="https://github-readme-stats.vercel.app/api/pin/?username=winsleytan&repo=flazOfficialWebsite&theme=swift" width="500" height="200" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+
     
     </dev>
 

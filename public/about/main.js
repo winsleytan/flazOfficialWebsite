@@ -59,6 +59,10 @@ document.getElementById('about').addEventListener('click', function() {
   window.location.href = './index.html'; 
 });
 
-document.getElementById('contact').addEventListener('click', function() {
+document.getElementById('feedback').addEventListener('click', function() {
   window.location.href = '../contact/index.html'; 
+});
+
+document.getElementById('github').addEventListener('click', function() {
+  window.location.href = 'https://github.com/winsleytan/flazOfficialWebsite'; 
 });
