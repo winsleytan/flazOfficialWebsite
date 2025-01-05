@@ -1,10 +1,10 @@
-Welcome to **Flaz Official Website**!!😎
+Welcome to **Flaz Official Website**! 😎
 
-This might be the first website I made for myself instead of making other projects for bootcamp etc.
+This is the first website I've created for myself, rather than for bootcamp projects or other assignments.
 
-The website may look basic and nothing special for now haha🫠
+It may look basic and unremarkable right now, haha 🫠
 
-Don't worry, it'll great in future!!
+But don't worry, it will be great in the future!
 
 Preview:
 <img src="./img/websitePreview.png" alt="websitePreview"/>

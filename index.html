@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta tags for character encoding, compatibility, and responsive design -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title of the webpage -->
     <title>Home | Flaz Official Website</title>
+    <!-- External stylesheets and fonts -->
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="./public/flazLogo.svg" type="image/x-icon" sizes="16x16">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+    <!-- Material icons and Boxicons for UI elements -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,0"
@@ -21,12 +23,15 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <!-- Akar icons for additional UI elements -->
     <script src="https://unpkg.com/akar-icons-fonts"></script>
   </head>
 
   <body>
+    <!-- Sidebar for navigation -->
     <aside class="sidebar">
       <header>
+        <!-- Button to toggle sidebar visibility -->
         <button
           type="button"
           className="sidebar-burger"
@@ -34,11 +39,13 @@
         >
           <i class="ai-three-line-horizontal"></i>
         </button>
+        <!-- Website logo -->
         <img src="./public/flazLogo.svg" />
       </header>
+      <!-- Navigation menu -->
       <ul>
         <li>
-          <button id="home"  type="button" onclick="onClick(this)">
+          <button id="home" type="button" onclick="onClick(this)">
             <i class="ai-home-alt1"></i>
             <p>Home</p>
           </button>
@@ -55,6 +62,7 @@
             <p>Projects</p>
             <i class="ai-chevron-down-small"></i>
           </button>
+          <!-- Sub-menu for Projects -->
           <div class="sub-menu">
             <ul>
               <li>
@@ -75,6 +83,7 @@
             <p>Games</p>
             <i class="ai-chevron-down-small"></i>
           </button>
+          <!-- Sub-menu for Games -->
           <div class="sub-menu">
             <ul>
               <li>
@@ -91,33 +100,44 @@
         </li>
         <li>
           <button id="about" type="button" onclick="onClick(this)">
-            <i class="bx bx-info-circle"></i>
+            <i class='bx bxs-user-detail'></i>
             <p>About</p>
           </button>
         </li>
         <li>
-          <button id="contact" type="button" onclick="onClick(this)">
-            <i class="bx bxs-contact"></i>
-            <p>Contact</p>
+          <button id="feedback" type="button" onclick="onClick(this)">
+            <i class="bx bxs-error"></i>
+            <p>Feedback</p>
+          </button>
+        </li>
+        <li>
+          <button id="github" type="button" onclick="onClick(this)">
+            <i class="bx bxl-github"></i>
+            <p>GitHub</p>
           </button>
         </li>
         <li>
           <div class="frame">
             <hr/>
-          <button type="button"  onclick="handleClick('six')">
-            <i class="bx bxl-github"></i>
-            <p>Ver Beta 1.0.2</p>
-          </button>
-        </div>
+            <button type="button" onclick="handleClick('six')">
+              <i class="bx bx-info-circle"></i>
+              <p>Ver Release 1.0</p>
+            </button>
+          </div>
         </li>
       </ul>
     </aside>
     
+    <!-- Modal container for displaying updates -->
     <div id="modal-container">
       <div class="modal-background">
         <div class="modal">
-          <h2>ⓘ Beta 1.0.2</h2>
-          <p style="text-align: left;">- Updated Home Page <br/>- Minor UI Changes</p>
+          <h2>ⓘ Release 1.0</h2>
+          <p style="text-align: left; padding: 0px 5px">
+            - Pages Changes</br>
+            - UI Improvements</br>
+            - Bug Fixes</br>
+          </p>
           <svg
             class="modal-svg"
             xmlns="http://www.w3.org/2000/svg"
@@ -142,166 +162,70 @@
     <script type="text/javascript">
       const modal = document.querySelector("#modal-container");
 
+      // Function to handle modal display
       const handleClick = (buttonId) => {
         modal.classList = [];
         modal.classList.add(buttonId);
         document.body.classList.add("modal-active");
       };
 
+      // Event listener to close modal on background click
       modal.addEventListener("click", () => {
         modal.classList.add("out");
         document.body.classList.remove("modal-active");
       });
     </script>
 
-
+    <!-- Main content area -->
     <dev class="maincontent">
-      <h1>Welcome!!</h1>
-          <p>I am glad that you vistied my first ever website. I am a student from Malaysia and I am inspired by some of my seniors 
-            and even my beloved teacher Mr. Gopi to create this website. I am still learning and improving the website in future. 
-            This website is a small step towards my journey in web development, and I am excited to share it with you. 
-            Feel free to explore the different sections and let me know your thoughts via DC.
-          </p>
+      <dev class="welcome">
 
-          <h3 class="main__heading">⭐ My Favourite Anime Characters :></h3>
+      <div class="loader">
+        <div data-glitch="Welcome" class="glitch">Welcome</div>
+     </div>
 
-          <div class="container">
-            <div class="box box-1" style="--img: url(./img/alisa.jpg);" data-text="艾莉莎·米哈伊罗夫纳·九条"></div>
-            <div class="box box-2" style="--img: url(./img/周防有希.jfif);" data-text="周防 有希"></div>
-            <div class="box box-3" style="--img: url(./img/KimishimaAyano.jpg
-          );" data-text="君嶋 綾乃"></div>
-            <div class="box box-4" style="--img: url(./img/mitsuhaMiyamizu.jpeg);" data-text="宮水三葉"></div>
-            <div class="box box-5" style="--img: url(./img/kasugano.jpeg);" data-text="春日野穹"></div>
-          </div>
-  
-          
-      
+     <dev class="desc">
+      <p>I am glad that you visited my first ever website. I am a student from Malaysia and I am inspired by some of my seniors 
+        and even my beloved teacher Mr. Gopi to create this website. I am still learning and improving the website currently.<br/> 
+        Feel free to explore the different sections and let me know your thoughts via DC. <br/><span style="font-weight: 800;">Happy New Year 2025!!</span>
+      </p>
+     </dev>
+    </dev>
 
-          <!-- hover -->
-          <main class="main flow">
-            <h3 class="main__heading">🏆 Past Achievement</h3>
-            <div class="main__cards cards">
-              <div class="cards__inner">
-                <div class="cards__card card">
-                  <h2 class="card__heading">Team Achievement by <br/>The Horsey Homies</h2>
-                  <p class="card__price">STEM Carnival 2023</p>
-                  <ul role="list" class="card__bullets flow">
-                    <li>Young Stemist Conference (Robotic Engineering) - Bronze</li>
-                    <li>Young Innovator Fair - Participation</li>
-                  </ul>
-                  <a href="https://www.penangstem.com/stem-showcase-2023/" class="card__cta cta">Learn More</a>
-                </div>
-          
-                <div class="cards__card card">
-                  <h2 class="card__heading">Team Achievement by <br/>The Horsey Homies</h2>
-                  <p class="card__price">Penang Maker Fair 2023</p>
-                  <ul role="list" class="card__bullets flow">
-                    <li>Young Innovator Challenge (YIC) - Gold</li>
-                  </ul>
-                  <a href="https://younginnovators.my/" class="card__cta cta">Learn More</a>
-                </div>
-          
-                <div class="cards__card card">
-                  <h2 class="card__heading">Team Achievement by <br/>The Horsey Homies</h2>
-                  <p class="card__price">Online Challenge</p>
-                  <ul role="list" class="card__bullets flow">
-                    <li>Balik Pulau National Innovator Challenge 2023 - Gold</li>
-                    <li>Smart Innovator Challenge 2024 (SIC) - Gold</li>
-                    <li>National Tinkering Challenge 2023 - Participation</li>
-                  </ul>
-                  <a href="#" class="card__cta cta">Learn More</a>
-                </div>
-              
-              <div class="overlay cards__inner"></div>
-            </div>
-          </main>
+      <h3 class="main__heading">⭐ My Favourite Anime Characters :></h3>
 
-          <h3 class="main__heading">🤖 Best Project THH Presents - Fantastic Forest Fire Fighter (F4）</h3>
+      <div class="container">
+        <div class="box box-1" style="--img: url(./img/alisa.jpg);" data-text="艾莉莎·米哈伊罗夫纳·九条"></div>
+        <div class="box box-2" style="--img: url(./img/nokotan.jpeg);" data-text="鹿乃子乃子乃子虎視眈眈"></div>
+        <div class="box box-3" style="--img: url(./img/Inui_Sajuna.jpg);" data-text="乾紗壽叶"></div>
+        <div class="box box-4" style="--img: url(./img/mahiru.jpeg);" data-text="椎名真晝"></div>
+        <div class="box box-5" style="--img: url(./img/kasugano.jpeg);" data-text="春日野穹"></div>
+      </div>
 
-          <div class="image-slider">
-            <section class="slider__content">
-                <button type="button" class="slider-control--button prev-button">
-                    <svg width="16" height="16" fill="currentColor" class="icon arrow-left-circle" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
-                    </svg>
-                </button>
-                <main class="image-display"></main>
-                <button type="button" class="slider-control--button next-button">
-                    <svg width="16" height="16" fill="currentColor" class="icon arrow-right-circle" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
-                    </svg>
-                </button>
-            </section>
-            <nav class="slider-navigation">
-                <button class="nav-button" aria-selected="true">
-                    <img class="thumbnail" src="./img/F4.jpg" alt="F4 pic1" />
-                </button>
-                <button class="nav-button" aria-selected="false">
-                    <img class="thumbnail" src="./img/f41.jpg" alt="F4 pic2" />
-                </button>
-                <button class="nav-button" aria-selected="false">
-                    <img class="thumbnail" src="./img/f42.jpg" alt="F4 pic3" />
-                </button>
-                <button class="nav-button" aria-selected="false">
-                    <img class="thumbnail" src="./img/cam.jpg" alt="F4 cam showcase" />
-                </button>
-                <button class="nav-button" aria-selected="false">
-                  <img class="thumbnail" src="./img/material1.svg" alt="material pic 1" />
-                </button>
-                <!-- <button class="nav-button" aria-selected="false">
-                  <img class="thumbnail" src="./img/material2.svg" alt="material pic 2" />
-                </button> -->
-                <button class="nav-button" aria-selected="false">
-                    <img class="thumbnail" src="./img/productImpact.png" alt="F4 product impact" />
-                </button>
-            </nav>
-        </div>
+      <div class="hidden">
+      <a href="./public/hidden/index.html">...</a>
+      </div>
 
-        <h3 class="main__heading">🎤 Top Tracks I Played During 2024</h3>
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0t4ZU0q6IIQfzgh8ivPKcz?utm_source=generator" 
-        width="80%" height="352" frameBorder="0" allowfullscreen="" 
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+   
 
-        <main class="main flow">
-          <h3 class="main__heading">💖 More</h3>
-          <div class="main__cards cards">
-            <div class="cards__inner">
-              <div class="cards__card card">
-                <h2 class="card__heading">Flaz Team</h2>
-                <p class="card__price">Join My Team!</p>
-                <ul role="list" class="card__bullets flow">
-                  <li>Open to all skill levels</li>
-                  <li>Collaborate on exciting projects</li>
-                  <li>Gain valuable experience</li>
-                  <li>Be part of a supportive community</li>
-                </ul>
-                <a href="https://forms.gle/bX3c7ukorxrbnn2Z9" class="card__cta cta">Join Now</a>
-              </div>
-              
-              <div class="cards__card card">
-                <h2 class="card__heading">Flaz Official Website</h2>
-                <p class="card__price">Feedback Needed!</p>
-                <ul role="list" class="card__bullets flow">
-                  <li>Help me improve the website</li>
-                  <li>Share your thoughts and suggestions</li>
-                  <li>Contribute to a better user experience</li>
-                </ul>
-                <a href="https://discord.gg/A725pd8b5j" class="card__cta cta">Submit Feedback via DC</a>
+      <!-- Section for top tracks played -->
+      <h3 class="main__heading">🎤 Top Tracks I Played During 2024</h3>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0t4ZU0q6IIQfzgh8ivPKcz?utm_source=generator" 
+      width="80%" height="352" frameBorder="0" allowfullscreen="" 
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-            <div class="overlay cards__inner"></div>
-          </div>
-        </main>
+    
 
+        <!-- Section for Discord server -->
         <h3 class="main__heading">📣 My Discord Server</h3>
         <iframe src="https://discord.com/widget?id=1001078119022731315&theme=dark" width="650" height="300" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 
-          <!-- Visitor Counter -->
-          <h3 class="main__heading">📈 Visitor Counter</h3>
-          <a href='https://free-hit-counters.net/'>free-hit-counters.net</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=6c7cbe321bfc9b7e55a7053c294361be21ccde3b'></script>
-          <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1280376/t/9"></script>
-
-  </dev>
+        <!-- Visitor Counter -->
+        <h3 class="main__heading">📈 Visitor Counter</h3>
+        <a href='https://free-hit-counters.net/'>free-hit-counters.net</a> 
+        <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=6c7cbe321bfc9b7e55a7053c294361be21ccde3b'></script>
+        <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1280376/t/9"></script>
+      </dev>
     <script src="main.js"></script>
   </body>
-
 </html>
