@@ -10,7 +10,6 @@ body {
   flex-direction: row;
 }
 
-
 button {
   background: transparent;
   border: 0;
@@ -19,18 +18,30 @@ button {
   text-align: left;
 }
 
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10%;
+  }
+
+}
+
 .sidebar {
-  position: relative; 
-  flex: 0 0 260px;
-  margin-left: 100px;
-  margin-right: 50px;
-  margin-bottom: 50px;
-  top: 24px;
-  left: 0;
-  bottom: 24px;
+  /* position: relative;  */
   display: flex;
+  margin-top: 1.5%;
+  margin-bottom: 20%;
+  margin-left: 2%;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   border-radius: 16px;
   padding: 0 12px;
   border: 1px solid rgb(255 255 255 / 8%);
@@ -38,6 +49,7 @@ button {
   backdrop-filter: blur(20px);
   
 }
+
 
 .sidebar header {
   display: flex;
@@ -141,8 +153,8 @@ button {
 }
 
 .maincontent {
-  flex: 1; 
-  margin: 24px 16px; 
+  flex: 1;
+  margin: 24px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -155,7 +167,8 @@ button {
   font-weight: 400;
   line-height: 1.5;
   overflow-y: auto;
-  margin-right: 100px;
+  width: calc(100% - 48px); /* Adjust width to fit within the window */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .welcome {
@@ -187,12 +200,12 @@ button {
 .container {
 	position: relative;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
 	gap: 1em;
-	width: 800px;
+	width: 90%;
 	height: 500px;
 	transition: all 400ms;
-  max-width: 75rem;
+  /* max-width: 75rem; */
   padding: 3em 1.5em;
 }
 
@@ -211,35 +224,35 @@ button {
 }
 
 .container .box:hover {
-	filter: grayscale(0%) opacity(100%);
+	filter: grayscale(19%) opacity(100%);
 }
 
 .container:has(.box-1:hover) {
-	grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
 }
 
 .container:has(.box-2:hover) {
-	grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
 }
 
 .container:has(.box-3:hover) {
-	grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
 }
 
 .container:has(.box-4:hover) {
-	grid-template-columns: 1fr 1fr 1fr 3fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 2fr 1fr;
 }
 
 .container:has(.box-5:hover) {
-	grid-template-columns: 1fr 1fr 1fr 1fr 3fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
 }
 
 .box:nth-child(odd) {
-	transform: translateY(-16px);
+	transform: translateY(-10px);
 }
 
 .box:nth-child(even) {
-	transform: translateY(16px);
+	transform: translateY(10px);
 }
 
 .box::after {
@@ -248,7 +261,7 @@ button {
 	bottom: 20px;
 	background: #000;
 	color: #fff;
-	padding: 10px 10px 10px 14px;
+	/* padding: 10px 10px 10px 14px; */
 	letter-spacing: 4px;
 	text-transform: uppercase;
 	transform: translateY(60px);
@@ -858,4 +871,46 @@ body.modal-active {
   71% {
     transform: skewX(10deg) skewY(-10deg);
   }
+}
+
+
+
+
+
+
+.sidebar.close {
+    /* transform: translateX(260px); Slide the sidebar in when 'open' class is added */
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+  }
+  
+.sidebar.close > *:not(header) {
+    display: none;
+}
+
+
+/* Sidebar header button for toggling */
+.sidebar header button {
+  width: 60px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* button to toggle the sidebar */
+.sidebar-burger {
+  position: absolute;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.sidebar-burger.close {
+  transform: rotate(180deg);
 }

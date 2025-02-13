@@ -116,3 +116,11 @@ const initOverlayCard = (cardEl) => {
 cards.forEach(initOverlayCard);
 document.body.addEventListener("pointermove", applyOverlayMask);
 
+function toggleSidebar() {
+  // Get the sidebar element
+  const sidebar = document.querySelector('.sidebar');
+  const burgerButton = document.querySelector('.sidebar-burger');
+  
+  sidebar.classList.toggle('close');
+  burgerButton.classList.toggle('close');
+}
