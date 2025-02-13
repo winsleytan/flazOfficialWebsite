@@ -21,34 +21,41 @@ button {
   text-align: left;
 }
 
+
 /* CSS FOR MOBILE SIZE */
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
   body {
     flex-direction: column;
   }
 
   /* Sidebar CSS for Mobile Size */
   .sidebar {
+    width:auto;
     position: relative;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 10%;
+    padding: 0 20px;
+    margin: 24px;
   }
 
-  
+}
+
+/* Sidebar CSS for Dekstop Size */
+@media (min-width: 1280px) {
+  .sidebar {
+    width:25%;
+    position: relative;
+    margin-left: 2%;
+    padding: 0 12px;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+  }
 }
 
 /* Sidebar Overall*/
 .sidebar {
-  width: 100%;
   display: flex;
-  margin-top: 1.5%;
-  margin-bottom: 1.5%;
-  margin-left: 2%;
   flex-direction: column;
   gap: 10px;
   border-radius: 16px;
-  padding: 0 12px;
   border: 1px solid rgb(255 255 255 / 8%);
   background: rgba(255, 255, 255, 0.068);
   backdrop-filter: blur(20px);
