@@ -30,17 +30,17 @@ button {
   /* Sidebar CSS for Mobile Size */
   .sidebar {
     position: relative;
-    width: 100%;
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 10%;
   }
 
+  
 }
 
 /* Sidebar Overall*/
 .sidebar {
-  width: 25%;
+  width: 100%;
   display: flex;
   margin-top: 1.5%;
   margin-bottom: 1.5%;
