@@ -65,7 +65,7 @@ document.getElementById('feedback').addEventListener('click', function() {
 });
 
 document.getElementById('github').addEventListener('click', function() {
-  window.location.href = 'https://github.com/winsleytan/flazOfficialWebsite'; 
+  window.location.href = './public/patchNotes/index.html'; 
 });
 
 // glow
@@ -124,3 +124,27 @@ function toggleSidebar() {
   sidebar.classList.toggle('close');
   burgerButton.classList.toggle('close');
 }
+
+
+
+// Select the checkbox input
+const themeSwitcher = document.querySelector('.ui-switch input');
+
+// Function to toggle theme
+function toggleTheme() {
+  if (themeSwitcher.checked) {
+    // If checked, set dark theme
+    document.body.style.backgroundColor = '#000A22'; // Dark background
+    document.body.style.color = '#fff'; // Light text
+  } else {
+    // If not checked, set light theme
+    document.body.style.backgroundColor = 'hsla(222, 75.30%, 30.20%, 0.90)'; // Light background
+    document.body.style.color = '#000'; // Dark text
+  }
+}
+
+// Add event listener to the checkbox
+themeSwitcher.addEventListener('change', toggleTheme);
+
+// Initialize theme on page load
+toggleTheme();
