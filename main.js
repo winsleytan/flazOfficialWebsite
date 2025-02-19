@@ -64,57 +64,57 @@ document.getElementById('feedback').addEventListener('click', function() {
   window.location.href = './public/contact/index.html'; 
 });
 
-document.getElementById('github').addEventListener('click', function() {
+document.getElementById('patch').addEventListener('click', function() {
   window.location.href = './public/patchNotes/index.html'; 
 });
 
-// glow
-console.clear();
+// // glow
+// console.clear();
 
-const cardsContainer = document.querySelector(".cards");
-const cardsContainerInner = document.querySelector(".cards__inner");
-const cards = Array.from(document.querySelectorAll(".card"));
-const overlay = document.querySelector(".overlay");
+// const cardsContainer = document.querySelector(".cards");
+// const cardsContainerInner = document.querySelector(".cards__inner");
+// const cards = Array.from(document.querySelectorAll(".card"));
+// const overlay = document.querySelector(".overlay");
 
-const applyOverlayMask = (e) => {
-  const overlayEl = e.currentTarget;
-  const x = e.pageX - cardsContainer.offsetLeft;
-  const y = e.pageY - cardsContainer.offsetTop;
+// const applyOverlayMask = (e) => {
+//   const overlayEl = e.currentTarget;
+//   const x = e.pageX - cardsContainer.offsetLeft;
+//   const y = e.pageY - cardsContainer.offsetTop;
 
-  overlayEl.style = `--opacity: 1; --x: ${x}px; --y:${y}px;`;
-};
+//   overlayEl.style = `--opacity: 1; --x: ${x}px; --y:${y}px;`;
+// };
 
-const createOverlayCta = (overlayCard, ctaEl) => {
-  const overlayCta = document.createElement("div");
-  overlayCta.classList.add("cta");
-  overlayCta.textContent = ctaEl.textContent;
-  overlayCta.setAttribute("aria-hidden", true);
-  overlayCard.append(overlayCta);
-};
+// const createOverlayCta = (overlayCard, ctaEl) => {
+//   const overlayCta = document.createElement("div");
+//   overlayCta.classList.add("cta");
+//   overlayCta.textContent = ctaEl.textContent;
+//   overlayCta.setAttribute("aria-hidden", true);
+//   overlayCard.append(overlayCta);
+// };
 
-const observer = new ResizeObserver((entries) => {
-  entries.forEach((entry) => {
-    const cardIndex = cards.indexOf(entry.target);
-    let width = entry.borderBoxSize[0].inlineSize;
-    let height = entry.borderBoxSize[0].blockSize;
+// const observer = new ResizeObserver((entries) => {
+//   entries.forEach((entry) => {
+//     const cardIndex = cards.indexOf(entry.target);
+//     let width = entry.borderBoxSize[0].inlineSize;
+//     let height = entry.borderBoxSize[0].blockSize;
 
-    if (cardIndex >= 0) {
-      overlay.children[cardIndex].style.width = `${width}px`;
-      overlay.children[cardIndex].style.height = `${height}px`;
-    }
-  });
-});
+//     if (cardIndex >= 0) {
+//       overlay.children[cardIndex].style.width = `${width}px`;
+//       overlay.children[cardIndex].style.height = `${height}px`;
+//     }
+//   });
+// });
 
-const initOverlayCard = (cardEl) => {
-  const overlayCard = document.createElement("div");
-  overlayCard.classList.add("card");
-  createOverlayCta(overlayCard, cardEl.lastElementChild);
-  overlay.append(overlayCard);
-  observer.observe(cardEl);
-};
+// const initOverlayCard = (cardEl) => {
+//   const overlayCard = document.createElement("div");
+//   overlayCard.classList.add("card");
+//   createOverlayCta(overlayCard, cardEl.lastElementChild);
+//   overlay.append(overlayCard);
+//   observer.observe(cardEl);
+// };
 
-cards.forEach(initOverlayCard);
-document.body.addEventListener("pointermove", applyOverlayMask);
+// cards.forEach(initOverlayCard);
+// document.body.addEventListener("pointermove", applyOverlayMask);
 
 function toggleSidebar() {
   // Get the sidebar element
@@ -124,7 +124,20 @@ function toggleSidebar() {
   sidebar.classList.toggle('close');
   burgerButton.classList.toggle('close');
 }
+const modal = document.querySelector("#modal-container");
 
+// Function to handle modal display
+const handleClick = (buttonId) => {
+  modal.classList = [];
+  modal.classList.add(buttonId);
+  document.body.classList.add("modal-active");
+};
+
+// Event listener to close modal on background click
+modal.addEventListener("click", () => {
+  modal.classList.add("out");
+  document.body.classList.remove("modal-active");
+});
 
 
 // Select the checkbox input
@@ -148,3 +161,5 @@ themeSwitcher.addEventListener('change', toggleTheme);
 
 // Initialize theme on page load
 toggleTheme();
+
+

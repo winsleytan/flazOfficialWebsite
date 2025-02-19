@@ -24,49 +24,46 @@ const onClick = (item) => {
 
 //Button Hyperlink
 document.getElementById('home').addEventListener('click', function() {
-  window.location.href = '../backToHome.html'; 
+  window.location.href = '../'; 
 });
 
 document.getElementById('gallary').addEventListener('click', function() {
-  window.location.href = './public/gallary/index.html'; 
+  window.location.href = '../error/index.html'; 
 });
 
 document.getElementById('register-page').addEventListener('click', function() {
-  window.location.href = './public/projects/register.html'; 
+  window.location.href = '../error/index.html'; 
 });
 
 document.getElementById('login-page').addEventListener('click', function() {
-  window.location.href = './public/projects/login/index.html'; 
+  window.location.href = '../error/index.html'; 
 });
 
 document.getElementById('online-ordering-page').addEventListener('click', function() {
-  window.location.href = './public/projects/ordering-homepage.html';
+  window.location.href = '../error/index.html';
 });
 
 document.getElementById('tictactoe').addEventListener('click', function() {
-  window.location.href = './public/games/tictactoe/tictactoe.html'; 
+  window.location.href = '../error/index.html'; 
 });
 
 document.getElementById('rockPaperScissors').addEventListener('click', function() {
-  window.location.href = './public/games/rockPaperScissors/index.html'; 
+  window.location.href = '../error/index.html'; 
 });
 
 document.getElementById('tower').addEventListener('click', function() {
-  window.location.href = './public//games/towerBlocks/index.html'; 
+  window.location.href = '../error/index.html'; 
 });
 
 
 document.getElementById('about').addEventListener('click', function() {
-  window.location.href = './public/about/index.html'; 
+  window.location.href = '../error/index.html'; 
 });
 
 document.getElementById('feedback').addEventListener('click', function() {
-  window.location.href = './public/contact/index.html'; 
+  window.location.href = '../error/index.html'; 
 });
 
-document.getElementById('patch').addEventListener('click', function() {
-  window.location.href = './public/patchNotes/index.html'; 
-});
 
 
 function toggleSidebar() {
