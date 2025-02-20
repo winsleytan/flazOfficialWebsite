@@ -1,0 +1,128 @@
+/* From Uiverse.io by Yaya12085 */ 
+.arrangement {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 5%;
+}
+
+.post-card {
+  width: 350px;
+  background: lightgrey;
+  background-color: rgb(24 27 32);
+  border: 1px solid rgb(84 90 106);
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+
+}
+
+.avatar {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: blueviolet;
+  background-image: url(./src/pfp.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title {
+  height: 100%;
+  font-size: 20px;
+  line-height: 35px;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #fff;
+  text-decoration: none;
+  transition: all .35s ease-in;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.title:hover {
+  text-decoration: underline blueviolet;
+}
+
+.datetime {
+  font-size: 12px;
+  color: rgb(168 179 207);
+  margin: 10px 0;
+}
+
+.image-preview1 {
+  flex: 1;
+  min-height: 150px;
+  width: 100%;
+  border-radius: 20px;
+  background-image: url(./src/dev2.0.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 4px;
+}
+
+.image-preview2 {
+  flex: 1;
+  min-height: 150px;
+  width: 100%;
+  border-radius: 20px;
+  background-image: url(./src/dev2.1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 4px;
+}
+
+.image-preview3 {
+  flex: 1;
+  min-height: 150px;
+  width: 100%;
+  border-radius: 20px;
+  background-image: url(./src/dev2.2.1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 4px;
+}
+
+.image-preview4 {
+  flex: 1;
+  min-height: 150px;
+  width: 100%;
+  border-radius: 20px;
+  background-image: url(./src/dev2.2.2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 4px;
+}
+
+.comment-like {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2px 0;
+}
+
+.comment-like span {
+  cursor: pointer;
+  height: 40px;
+  width: 50px;
+  padding: 0 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  border-radius: 10px;
+  background-color: transparent;
+  transition: all .15s ease;
+}
+
+.comment-like span:hover {
+  background-color: rgba(137, 43, 226, 0.096);
+}
+
+.comment-like span svg {
+  fill: rgb(255, 255, 255);
+  margin-right: 2px;
+}
