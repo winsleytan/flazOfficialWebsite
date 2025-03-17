@@ -97,6 +97,17 @@
   margin-bottom: 4px;
 }
 
+.image-preview5 {
+  flex: 1;
+  min-height: 150px;
+  width: 100%;
+  border-radius: 20px;
+  background-image: url(./src/dev2.3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 4px;
+}
+
 .comment-like {
   display: flex;
   justify-content: space-around;

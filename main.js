@@ -105,7 +105,7 @@ function toggleTheme() {
     document.body.style.color = '#fff'; // Light text
   } else {
     // If not checked, set light theme
-    document.body.style.backgroundColor = 'hsla(222, 75.30%, 30.20%, 0.90)'; // Light background
+    document.body.style.backgroundColor = 'rgb(10, 38, 149)'; // Light background
     document.body.style.color = '#000'; // Dark text
   }
 }
