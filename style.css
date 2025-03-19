@@ -23,7 +23,7 @@ button {
 
 
 /* CSS FOR MOBILE SIZE */
-@media (375px <= width <= 768px) {
+@media (375px <= width <= 780px) {
   body {
     flex-direction: column;
   }
@@ -44,7 +44,7 @@ button {
 }
 
 /* Sidebar CSS for Dekstop Size */
-@media (width > 768px) {
+@media (width > 780px) {
   .sidebar {
     width:25%;
     position: relative;
