@@ -23,7 +23,7 @@ button {
 
 
 /* CSS FOR MOBILE SIZE */
-@media (375px <= width <= 780px) {
+@media (width <= 780px) {
   body {
     flex-direction: column;
   }
