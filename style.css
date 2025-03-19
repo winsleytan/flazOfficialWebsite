@@ -23,7 +23,7 @@ button {
 
 
 /* CSS FOR MOBILE SIZE */
-@media (max-width: 790px) {
+@media (375px <= width <= 768px) {
   body {
     flex-direction: column;
   }
@@ -44,7 +44,7 @@ button {
 }
 
 /* Sidebar CSS for Dekstop Size */
-@media (min-width: 790px) {
+@media (width > 768px) {
   .sidebar {
     width:25%;
     position: relative;
@@ -331,14 +331,7 @@ body.modal-active {
 #modal-container.six.out .modal-background .modal {
   animation: modalFadeOut 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
-/* #modal-container.six.out .modal-background .modal h2,
-#modal-container.six.out .modal-background .modal p {
-  animation: modalContentFadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1)
-    forwards;
-} */
-/* #modal-container.six.out .modal-background .modal .modal-svg rect {
-  animation: sketchOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-} */
+
 
 #modal-container .modal-background {
   display: table-cell;
@@ -721,7 +714,7 @@ body.modal-active {
     /* transform: translateX(260px); Slide the sidebar in when 'open' class is added */
     display: flex;
     flex-direction: column;
-    width: auto;
+    width: 300px;
     height: 90px;
   }
   
@@ -732,7 +725,7 @@ body.modal-active {
 
 /* Sidebar header button for toggling */
 .sidebar header button {
-  width: auto;
+  /* width: auto; */
   background: none;
   border: none;
   color: white;
@@ -1317,7 +1310,7 @@ strong {
 
 
 
-/* From Uiverse.io by R1SH4BH81 */ 
+/* latest update */
 .update-card {
   display: flex;
   align-items: center;
@@ -1330,7 +1323,7 @@ strong {
 }
 
 .update-card-image {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(15, 164, 227, 0.1);
   width: 200px;
   height: 150px;
   border-radius: 6px;
@@ -1339,6 +1332,7 @@ strong {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
 }
 
 .update-card-image:hover {
@@ -1367,7 +1361,7 @@ strong {
 }
 
 .update-heading {
-  font-weight: 600;
+  font-weight: 700;
   color: rgb(88, 87, 87);
   margin-bottom: 10px;
   text-align: left; /* Align text to the left */
@@ -1399,7 +1393,7 @@ strong {
   flex-wrap:wrap;
 }
 
-/* featured container*/
+/* project container*/
 .article-wrapper {
   width: 250px;
   -webkit-transition: 0.15s all ease-in-out;
@@ -1507,7 +1501,9 @@ strong {
 .container-project {
   width: 100%;
   height: 170px;
-  background: gray;
+  background: url('./img/flazLogo.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .project-container {
@@ -1762,4 +1758,123 @@ strong {
   background-repeat: no-repeat;
   background-size:cover;
   background-position: center;
+}
+
+
+/* feature card */
+.feature-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+.feature-card {
+  /* margin: auto; */
+  /* display: flex;
+  justify-content: left;
+  flex-direction: column; */
+  width: 325px;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  color: #141417;
+  margin-bottom: 10px;
+}
+.feature-card__hero {
+  /* background-color: #fef4e2; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 1.5rem;
+  font-size: 0.875rem;
+  height: 300px;
+}
+
+.feature-card__hero .feature-card__job-title {
+  display: flex;
+  justify-content: left;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 4px #333333;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 130px;
+}
+.feature-card__hero-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  font-weight: 700;
+}
+.feature-card__hero-header .header-title {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 10px;
+  opacity: 0.8;
+}
+
+.feature-card__hero-header .feature-card__icon {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 10px;
+  opacity: 0.8;
+}
+
+.feature-card__footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 0.75rem;
+  row-gap: 1rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+@media (min-width: 340px) {
+  .feature-card__footer {
+    flex-direction: row;
+    align-items: left;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+}
+.feature-card__job-summary {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.75rem;
+}
+.feature-card__btn {
+  width: 100%;
+  font-weight: 400;
+  border: none;
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  padding: 0.5rem 1.25rem;
+  border-radius: 1rem;
+  background-color: #141417;
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+@media (min-width: 340px) {
+  .feature-card__btn {
+    width: max-content;
+  }
 }
